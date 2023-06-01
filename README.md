@@ -2,7 +2,7 @@
 
 1)Project Description
 
-  This project represents a polynomial calculator with 6 mathematical operations:
+  This project implements a polynomial calculator with 6 mathematical operations:
 -addition
 -substraction
 -multiplication
