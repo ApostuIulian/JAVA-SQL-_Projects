@@ -23,9 +23,15 @@ take the first polynomial from the first field | 2.if the result is 0, the resul
 # QueueManagement
 
 1)Project Description
-
+  This project implements a real time queue management system based on the input given by the user.
+  
 2)How to use
-
+  Insert the desired simulation time, number of queues, number of clients, arival time interval and
+the service time inteval. After all the fields were filled, press the 'Start Simulation' button.
+A new frame will pop up where you can visualize the evolution of all queues in real time and the clients
+left to serve. At the end of the simulation (the simulation ends when the time is up or there are no more
+clients to be served) the average waiting time, average service time and the peak hour will be displayed
+in the bottom right corner.
    
    
 
