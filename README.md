@@ -32,6 +32,25 @@ A new frame will pop up where you can visualize the evolution of all queues in r
 left to serve. At the end of the simulation (the simulation ends when the time is up or there are no more
 clients to be served) the average waiting time, average service time and the peak hour will be displayed
 in the bottom right corner.
-   
+
+# OrdersManagement
+
+1)Project Description
+
+  This project implements an orders management system for processing clients orders for a warehouse with
+the help of relational databases (MySQL). Each order placed creates a bill (an immutable class (record)) if there
+are enough items in stock.
+
+2)How to use
+  
+  First of all, choose the type of data you want to operate on by pressing one button: Clients, Products or Orders.
+After you have made your choice, a new window will pop up where you can visualize the corresponding table data from
+MySQL in JTables. The operations on clients and products are similar: you can add by filling the fields, edit data 
+in the table (every column on a single row can be edited at once, the 'Apply Changes' button has to be pressed if you
+want to edit another row) and delete by selecting the desired rows (multiple deletion allowed). These changes will take
+place in the database. The JTable from the interface will be updated based on the changes that took place
+in MySQL so that if the changes could not be applied in MySQL, will not be applied in the JTable either.
+  
+  
    
 
