@@ -1,4 +1,4 @@
-# PolynomialCalculator
+# Polynomial Calculator
 
 1)Project Description
 
@@ -20,7 +20,7 @@ for every monomial, even for values like 1 and 0. Choose an operation and the re
 shown in the result field (1.for the derivative and integration, the operation will
 take the first polynomial from the first field | 2.if the result is 0, the result field will be empty).
 
-# QueueManagement
+# Queue Management
 
 1)Project Description
   This project implements a real time queue management system based on the input given by the user. 
@@ -34,7 +34,7 @@ left to serve. At the end of the simulation (the simulation ends when the time i
 clients to be served) the average waiting time, average service time and the peak hour will be displayed
 in the bottom right corner.
 
-# OrdersManagement
+# Orders Management
 
 1)Project Description
 
