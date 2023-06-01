@@ -69,7 +69,7 @@ planned for today (real time) and for other days as well.
 student wants to attend) teachers with fewer students being prioritized (one teacher cannot have all the students and the other none), 
 so that there are no activities that overlap. They can view their own grades for each activity already calculated by the weight set 
 by the teachers and see their upcoming activities. Every subject has a study group for students so students are automatically added
-to this groups when they choose what subjects they want to study. In these groups they can plan activities where a minimum number of 
+to these groups when they choose what subjects they want to study. In these groups they can plan activities where a minimum number of 
 students and a limit time can be set. If that threshold is not crossed before the time limit, the activity is canceled and the 
 students that wanted to attend it will be announced via a message. Also, the study groups have chats where students can message 
 each other (the conversation is being saved). Students have the option to add a teacher in a study group if they want to.
