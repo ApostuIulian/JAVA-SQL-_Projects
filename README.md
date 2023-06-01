@@ -23,7 +23,8 @@ take the first polynomial from the first field | 2.if the result is 0, the resul
 # QueueManagement
 
 1)Project Description
-  This project implements a real time queue management system based on the input given by the user.
+  This project implements a real time queue management system based on the input given by the user. 
+The main technique used is multi-threading, a queue representing a thread that will process clients.
   
 2)How to use
   Insert the desired simulation time, number of queues, number of clients, arival time interval and
