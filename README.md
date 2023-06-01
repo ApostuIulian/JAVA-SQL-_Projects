@@ -38,7 +38,7 @@ in the bottom right corner.
 
 1)Project Description
 
-  This project implements an orders management system for processing clients orders for a warehouse with
+  This project implements an order management system for processing clients orders for a warehouse with
 the help of relational databases (MySQL). Each order placed creates a bill (an immutable class (record)) if there
 are enough items in stock.
 
