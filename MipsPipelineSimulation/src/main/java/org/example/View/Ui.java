@@ -191,7 +191,7 @@ public class Ui extends javax.swing.JFrame {
     }
 
     public void setRunError(String error) {
-        ifTextArea.setText(error);
+        writeLabel.setText(error);
     }
 
     public void setWriteLabel() {
