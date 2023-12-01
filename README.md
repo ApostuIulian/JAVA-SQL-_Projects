@@ -51,27 +51,3 @@ in the table (every column on a single row can be edited at once, the 'Apply Cha
 want to edit another row) and delete by selecting the desired rows (multiple deletion allowed). These changes will take
 place in the database. The JTable from the interface will be updated based on the changes that took place
 in MySQL, so that if the changes could not be applied in MySQL, will not be applied in the JTable either.
-  
-# Study Platform
-  
-  Project Overview
-
-  This is a complex project that implements a study platform both for students and teachers. Every student, teacher and
-admin has an account. This was made possible by using MySQL. This project is based more on SQL rather than Java, all the
-options being implemented using MySQL queries, procedures and triggers. Logging in can be done by filling the email and
-password fields where the credentials will be verified (checking in MySQL if the user exists and if the password is correct).
-The admin is the one that can add, edit and delete teachers and students and can search them by name. 
-  Teachers can plan new activities like courses and exams that must only be set in the future (datetime format) and must not 
-overlap other activities that they have planned. The teachers have access to a catalog where they can give grades to students 
-for different activities, each activity having  a weight the teacher sets. They can view their list of activities that are 
-planned for today (real time) and for other days as well. 
-  Students can attend this activities being automatically distributed to different teachers, (teaching the same activity the 
-student wants to attend) teachers with fewer students being prioritized (one teacher cannot have all the students and the other none), 
-so that there are no activities that overlap. They can view their own grades for each activity already calculated by the weight set 
-by the teachers and see their upcoming activities. Every subject has a study group for students so students are automatically added
-to these groups when they choose what subjects they want to study. In these groups they can plan activities where a minimum number of 
-students and a limit time can be set. If that threshold is not crossed before the time limit, the activity is canceled and the 
-students that wanted to attend it will be announced via a message. Also, the study groups have chats where students can message 
-each other (the conversation is being saved). Students have the option to add a teacher in a study group if they want to.
-  Each person can see their own personal data.
-
