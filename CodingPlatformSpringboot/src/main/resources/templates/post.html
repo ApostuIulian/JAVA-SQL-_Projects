@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Post</title>
+    <link rel="stylesheet" href="/post.css">
+</head>
+<body>
+<header>
+    <h1>Forum Post</h1>
+</header>
+<main>
+    <form th:action="@{/user-page/forum/post}" method="get" role="form">
+        <section class="post">
+            <h2 class="post-title" th:text="${title}"></h2>
+            <p class="post-text" th:text="${text}"></p>
+        </section>
+    </form>
+    <section class="post-comment">
+        <h3>Post a Comment</h3>
+        <form th:action="@{/user-page/forum/post}" method="post" role="form" id="commentForm" th:object="${post}">
+                <textarea th:field="*{message}" name="commentText" id="commentText"
+                          placeholder="Write your comment here..." required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+    </section>
+    <section class="comments">
+        <form th:action="@{/user-page/forum/post}" method="get" role="form" th:object="${post}">
+
+            <h3>Comments</h3>
+            <ul>
+                <li th:each="post : ${posts}">
+            <div class="comment" id="comment1">
+                <p class="comment-text" th:text="${post.message}"></p>
+                <p class="comment-author" th:text="'Posted By: ' + ${post.userName}"></p>
+                <p class="comment-date" th:text = "${post.date}"></p>
+            </div>
+                </li>
+            </ul>
+        </form>
+    </section>
+</main>
+</body>
+</html>

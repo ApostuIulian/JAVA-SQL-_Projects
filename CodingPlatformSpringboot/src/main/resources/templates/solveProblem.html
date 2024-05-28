@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving Page</title>
+    <link rel="stylesheet" href="/solveProblem.css">
+</head>
+<body>
+<div class="container">
+    <form th:action="@{/user-page/solveProblem}" method="post" role="form" th:object="${solving}">
+        <label for="CppOrJ">Choose programming language of the solution:</label>
+        <select  id  = "CppOrJ" name="CppOrJ">
+            <option value="c">C++</option>
+            <option value="java">Java</option>
+        </select>
+        <br>
+        <h1><span>How to Solve:</span></h1>
+        <br>
+        Inputs for each problem will be provided as command line arguments. This means your program should read from the command line instead of asking the user for input during runtime.        <input type="hidden" name="idProblem" th:value="*{idProblem}" />
+        If you are using java to solve the problems, the main function looks like this:
+        <BR>
+        public main static void(String[] args).
+        <BR>
+        In C++ the main function will look like this:
+        <BR>
+        int main(int argc, char* argv[])
+        <BR>
+        where argc is the number of arguments.
+        <BR>
+        CONVERT THE ARGUMENTS TO THE REQUIRED DATATYPE AS SHOW IN THE EXAMPLE OF THE PROBLEM.
+        <h1><span id="problemTitle" th:text="${title}"></span></h1>
+        <p id="problemTask" th:text="${task}"></p>
+
+    <textarea th:field="*{code}" id="codeInput" placeholder="Insert your code solution here..."></textarea>
+            <input type="submit" value="Submit Solution" />
+        <div class="message" th:if="${message != null}">
+            [[${message}]]
+        </div>
+        <p>Submitted Code</p>
+        <textarea id="submittedCode" th:text="${submittedCode}"></textarea>
+
+    </form>
+</div>
+</body>
+</html>

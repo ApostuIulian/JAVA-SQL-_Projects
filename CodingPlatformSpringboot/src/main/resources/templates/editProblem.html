@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Problem</title>
+  <link rel="stylesheet" href="/createProblem.css">
+</head>
+<body>
+<div class="container">
+  <h2>Edit Problem</h2>
+  <div class="message" th:if="${message != null}">
+    [[${message}]]
+  </div>
+  <form th:action="@{/admin-page/editProblem}" method="post" role="form" th:object="${problem}">
+    <input type="hidden" th:field="*{id}" />
+    <div class="txt_field">
+      <input th:field="${problem.name}" type="text" name="name" placeholder="Title" required />
+    </div>
+    <div class="txt_field">
+      <textarea th:field="${problem.task}" name="task" placeholder="Task" required></textarea>
+    </div>
+    <div class="txt_field">
+      <select th:field="${problem.difficulty}" name="difficulty" required>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+    <button type="submit">Submit</button></form>
+</div>
+</body>
+</html>

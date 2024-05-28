@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Challenge Platform</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+<div class="header">
+    <h1>Code Challenge Platform</h1>
+</div>
+<form th:action="@{/user-page}" method="get" role="form" th:object="${problem}">
+<div class="navigation">
+    <div> <a href="/user-page/accountInfo">Account information</a></div>
+    <div> <a href="/user-page/unsolvedProblems">Unsolved Problems</a></div>
+    <div> <a href="/user-page/forum">Forum</a></div>
+</div>
+<div class="content">
+    <div class="recent-problems">
+        <h2>Recently Added Problems</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Problem</th>
+                <th>Difficulty</th>
+            </tr>
+            <tr th:each="problem : ${recentProblems}">
+                <td th:text="${problem.id}"></td>
+                <td>
+                    <a th:href="@{'/user-page/solveProblem?idProblem=' + ${problem.id}}" th:text="${problem.name}"></a>
+                </td>
+                <td th:text="${problem.difficulty}"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="attempted-problems">
+        <h2>Unfinished Problems</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Problem ID</th>
+                <th>Problem Name</th>
+                <th>Score</th>
+                <th>Difficulty</th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="problem : ${attemptedProblems}">
+                <tr th:each="solving : ${problem.solvings}">
+                    <td th:text="${problem.id}"></td>
+                    <td>
+                        <a th:href="@{'/user-page/solveProblem?idProblem=' + ${problem.id}}" th:text="${problem.name}"></a>
+                    </td>
+                    <td th:text="${solving.score}"></td>
+                    <td th:text="${problem.difficulty}"></td>
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+    </div>
+</div>
+</form>
+</body>
+</html>
