@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+<div class="page">
+    <form th:action="@{/admin-page}" method="get" role="form" th:object="${problem}">
+    <div> <a href="/admin-page/createProblem">Add New Problem</a></div>
+    <h1>Problems</h1>
+    <table class="layout display responsive-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th colspan="1">Problem Title</th>
+            <th colspan="1">Problem Difficulty</th>
+            <th colspan="1">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="problem : ${problems}">
+            <td th:text="${problem.id}"></td>
+            <td th:text="${problem.name}"></td>
+            <td th:text="${problem.difficulty}"></td>
+            <td class="actions">
+                <a th:href="@{'/admin-page/editProblem?id=' + ${problem.id}}" class="edit-item" title="Edit">Edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/admin-page/deleteProblem?id=' + ${problem.id}}" class="remove-item" title="Remove">Remove</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/admin-page/createTest?id=' + ${problem.id}}" class="add-test" title="AddTest">Add New Test</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </form>
+</div>
+</body>
+</html>

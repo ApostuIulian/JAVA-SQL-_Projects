@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Test</title>
+    <link rel="stylesheet" href="/createTest.css">
+</head>
+<body>
+<div class="container">
+    <h2>Add Test</h2>
+    <div class="message" th:if="${message != null}">
+        [[${message}]]
+    </div>
+    <form th:action="@{/admin-page/createTest}" method="post" role="form" th:object="${test}">
+        <div class="txt_field">
+            <input th:field="${test.input}" type="text" name="in" placeholder="input" required />
+        </div>
+        <div class="txt_field">
+            <input th:field="${test.output}" type="text" name="out" placeholder="output" required/>
+        </div>
+
+        <button type="submit">Submit</button></form>
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #007bff;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
+main {
+    width: 80%;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Post section styling */
+.post {
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.post-text {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Comments section styling */
+.comments {
+    margin-top: 2rem;
+}
+
+.comments h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.comment {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.comment-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.comment-author, .comment-date {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.post-comment {
+    margin-top: 2rem;
+}
+
+.post-comment h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.post-comment form {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-comment textarea {
+    resize: vertical;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+}
+
+.post-comment button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    cursor: pointer;
+}
+
+.post-comment button:hover {
+    background: #555;
+}

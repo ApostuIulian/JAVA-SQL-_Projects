@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Information</title>
+    <link rel="stylesheet" href="/accountInfo.css">
+</head>
+<body>
+<div class="account-info">
+    <form th:action="@{/user-page/accountInfo}" method="get" role="form" th:object="${problem}">
+    <h1>Account Information</h1>
+    <div class="info-field"><strong>Full Name:</strong> <span th:text="${name}"></span></div>
+    <div class="info-field"><strong>Email:</strong> <span th:text="${email}"></span></div>
+    <div class="info-field"><strong>Username:</strong> <span th:text="${username}"></span></div>
+    <div class="info-field"><strong>Registered On:</strong> <span th:text="${date}"></span></div>
+    <div class="info-field"><strong>Solved Problems:</strong> <span th:text="${solvedNr}"></span></div>
+
+    <h2>Solved Problems</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Problem ID</th>
+            <th>Title</th>
+            <th>Difficulty</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="problem : ${problems}">
+            <td th:text="${problem.id}"></td>
+            <td>
+                <a th:href="@{'/user-page/solveProblem?idProblem=' + ${problem.id}}" th:text="${problem.name}"></a>
+            </td>
+            <td th:text="${problem.difficulty}"></td>
+        </tr>
+        </tbody>
+    </table>
+    </form>
+</div>
+</body>
+</html>
