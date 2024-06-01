@@ -1,3 +1,11 @@
+#Coding Platform
+
+A platform where admins can add new problems that users can solve in Java (C++ will be available).
+Admins can log in, add new problems (CRUD on problems), and add new tests to the problems).
+Users can create an account(they will be emailed), log in, solve problems (they can filter problems by name or difficulty), 
+make new posts on the forum (they can filter the forum posts by name), and leave messages to other forum posts.
+Java Spring, Postgresql, HTML(Thymeleaf)+CSS.
+
 # Polynomial Calculator
 
 1)Project Description
